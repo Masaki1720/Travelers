@@ -3,14 +3,14 @@ class CreateDestinations < ActiveRecord::Migration[6.1]
     create_table :destinations do |t|
       t.string :spot_name
       t.text :spot_introduction
-      t.string :prefecture
+      t.integer :destination_area, null: false, default: 0
       t.string :city
       t.string :transportation
       t.text :route
-      t.string :destination_pay
-      t.string :transportation_pay
+      t.integer :transportation_pay, null: false, default: 0
+      t.integer :destination_pay, null: false, default: 0
       t.string :hotel
-      t.string :hotel_pay
+      t.integer :hotel_pay, null: false, default: 0
       t.text :other_info
       t.timestamps
     end
