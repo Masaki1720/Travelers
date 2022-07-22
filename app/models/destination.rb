@@ -15,16 +15,4 @@ class Destination < ApplicationRecord
      Fukuoka:40,Saga:41,Nagasaki:42,Kumamoto:43,Oita:44,Miyazaki:45,Kagoshima:46,
      Okinawa:47
    }
-
-  enum transportation_pay:{
-     Cash:0,Credit_card:1,Debit_card:2,Prepaid_IC_card:3,Apple_pay:4,QR_code:5,Paypay:6,
-   }, _prefix: true
-
-  enum destination_pay:{
-     Cash:0,Credit_card:1,Debit_card:2,Prepaid_IC_card:3,Apple_pay:4,QR_code:5,Paypay:6,
-   }, _prefix: true
-
-   enum hotel_pay:{
-     Cash:0,Credit_card:1,Debit_card:2,Prepaid_IC_card:3,Apple_pay:4,QR_code:5,Paypay:6,
-   }, _prefix: true
 end

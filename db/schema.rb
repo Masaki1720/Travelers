@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_07_033649) do
+ActiveRecord::Schema.define(version: 2022_07_11_134342) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -43,17 +43,19 @@ ActiveRecord::Schema.define(version: 2022_07_07_033649) do
   create_table "destinations", force: :cascade do |t|
     t.string "spot_name"
     t.text "spot_introduction"
-    t.string "prefecture"
+    t.integer "destination_area", default: 0, null: false
     t.string "city"
     t.string "transportation"
     t.text "route"
-    t.string "destination_pay"
-    t.string "transportation_pay"
+    t.text "transportation_pay"
+    t.text "destination_pay"
     t.string "hotel"
-    t.string "hotel_pay"
+    t.text "hotel_pay"
+    t.string "exchange"
     t.text "other_info"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "prefecture"
   end
 
   create_table "users", force: :cascade do |t|
